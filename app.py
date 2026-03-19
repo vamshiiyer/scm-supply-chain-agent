@@ -113,17 +113,17 @@ session_service = VertexAiSessionService(
     location=GOOGLE_CLOUD_LOCATION,
 )
 
-'''
+
 # In the first run, create the agent engine by uncommenting the below line:\
-agent_engine = client.agent_engines.create()
+# agent_engine = client.agent_engines.create()
 
 # Optionally, print out the Agent Engine resource name. You will need the
 # resource name to interact with your Agent Engine instance later on.
-print(agent_engine.api_resource.name)
-'''
-'''
-# After the first run, comment the above agent_engines create() line and uncomment the below line to update the agent engine:
-After the second run, you don't need to run this line anymore as there is no need to update again. Comment it out after second run.
+# print(agent_engine.api_resource.name)
+
+
+## # After the first run, comment the above agent_engines create() line and uncomment the below line to update the agent engine:
+#After the second run, you don't need to run this line anymore as there is no need to update again. Comment it out after second run.
 agent_engine = client.agent_engines.update(
     name=APP_NAME,
     config={
@@ -136,7 +136,7 @@ agent_engine = client.agent_engines.update(
         }
     }
 )
-'''
+
 
 try:
     memory_bank_service = adk.memory.VertexAiMemoryBankService(
